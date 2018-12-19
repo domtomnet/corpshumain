@@ -1,0 +1,129 @@
+body{
+	background-color: #B0E0E6;}
+h1{
+	margin-top: -30px; text-align: center; font-size: 40px; color: white; font-family: 'Arvo';
+	text-shadow: 0 0 10px red, 0 0 1em blue, 0 0 0.2em red;
+}
+h4{
+	margin-top: -10px; font-size: 17px; font-family: 'Arvo';
+	color: red; text-shadow: 1px 1px black; font-weight: bold;
+}
+h4 span{
+	margin-top: -10px; text-align: left; font-size: 24px; font-family: 'Arvo';
+	color: red; text-shadow: 1px 1px red; font-weight: bold;
+}
+
+ /* Avec animation clignotement sur texte*/
+
+ @keyframes textcligno {
+  0%   {opacity: 1;}
+  50%  {opacity: 0;}
+  100% {opacity: 1;}
+}
+h5{
+	text-align: center; color: red; font-weight: bold;
+	animation-name: textcligno;
+  	animation-duration: 0.9s;
+  	animation-iteration-count: infinite;
+	position: relative;
+}
+div{
+	margin: 0; padding: 0;
+}
+div span{
+ 	margin-top: -10px; padding: 0; color: blue; font-size: 17px; font-weight: bold;
+}
+
+section{
+	width: 500px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+p{text-align: right; margin-top: 5px; margin-right: 15px; color: green; text-shadow: 1px 1px black; font-size: 14px; font-weight: bold;}
+
+section article#corpsHumain, section div#text{
+	height: 520px;
+	box-sizing: border-box;
+}
+#corpsHumain{
+	background-image: url("../img/corphumain.png");
+	background-repeat: no-repeat;
+	width: 170px;
+	float: left;
+}
+#text{
+	width: 380px;
+	margin-left: 150px;
+}
+
+
+ /* Avec code d'animation "défilé" multicouleurs sur parties ciblées
+ @keyframes cligno {
+  0%   {background-color: red;}
+  25%  {background-color: blue;}
+  50   {background-color: green;}
+  50%  {background-color: yellow;}
+  100% {background-color: red;}
+}*/
+ 
+ /* Avec animation clignotement sur parties ciblées*/
+
+@keyframes partiescligno {
+  0%   {background-color: red; opacity: 1;}
+  50%  {background-color: red; opacity: 0;}
+  100% {background-color: red; opacity: 1;}
+}
+ 
+ /* Sans code d'animation sur parties ciblées*/
+/*.partie{
+	background-color: #00000077;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: absolute;
+}*/
+
+.parties{
+	background-color: #00000077;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	animation-name: partiescligno;
+  	animation-duration: 0.9s;
+  	animation-iteration-count: infinite;
+	position: absolute;
+}
+.active{
+	background-color: #FF000077;
+}
+.texte{
+	display: none;
+	font-style: italic;
+}
+
+/*Mise en place des différentes parties sur le corps*/
+#epaule{
+	top: 15%;
+	left: 2%;
+}
+#coude{
+	top: 33%;
+	left: 21%;
+}
+#poignet{
+	top: 43%;
+	left: -1%;
+}
+#hanche{
+	top: 45%;
+	left: 18%;
+}
+#genou{
+	top: 67%;
+	left: 6%;
+}
+#cheville{
+	top: 85%;
+	left: 14%;
+}
