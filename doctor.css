@@ -47,7 +47,7 @@ section article#corpsHumain, section div#text{
 	box-sizing: border-box;
 }
 #corpsHumain{
-	background-image: url("../img/corphumain.png");
+	background-image: url("corphumain.png");
 	background-repeat: no-repeat;
 	width: 170px;
 	float: left;
